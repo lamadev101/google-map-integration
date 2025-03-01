@@ -1,0 +1,72 @@
+{
+  "home": {
+    "title": "נווט את העולם בקלות",
+    "description": "גלה מקומות חדשים, קבל כיוונים, וחקור את העולם עם תכונות המיפוי המתקדמות שלנו",
+    "getStarted": "התחל",
+    "exploreTitle": "חקור את העולם איתנו",
+    "exploreDescription": "גלה מקומות מדהימים ונווט בביטחון באמצעות תכונות המיפוי המתקדמות שלנו",
+    "features": [
+      {
+        "title": "ניווט בזמן אמת",
+        "description": "הנחיות צעד אחר צעד עם עדכוני תנועה חיים"
+      },
+      {
+        "title": "גלה מקומות",
+        "description": "מצא מקומות חדשים וקרא ביקורות ממשתמשים אחרים"
+      },
+      {
+        "title": "מפות לא מקוונות",
+        "description": "הורד מפות לשימוש לא מקוון בכל מקום בעולם"
+      }
+    ]
+  },
+  "footer": {
+    "brand": "MapApp",
+    "description": "עוזר לך לנווט ולגלות את העולם סביבך בקלות ובביטחון.",
+    "sections": {
+      "product": "מוצר",
+      "company": "חברה",
+      "resources": "משאבים"
+    },
+    "links": {
+      "features": "תכונות",
+      "pricing": "תמחור",
+      "api": "API",
+      "integration": "אינטגרציה",
+      "about": "אודות",
+      "blog": "בלוג",
+      "careers": "קריירה",
+      "press": "עיתונות",
+      "documentation": "תיעוד",
+      "support": "תמיכה",
+      "terms": "תנאים",
+      "privacy": "פרטיות"
+    },
+    "copyright": "© 2025 MapApp. כֹּל הַזְכוּיוֹת שְׁמוּרוֹת."
+  },
+  "localSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, en {🇬🇧 English} he {🇮🇱 Hebrew} other {Unknown}}"
+  },
+  "map": {
+    "addMarkerTitle": "הוסף סימון",
+    "category": "קטגוריה",
+    "description": "תיאור",
+    "submit": "הוסף סימון"
+  },
+  "addMarkerModal": {
+    "header": "הוסף פרטי מיקום",
+    "titlePlaceholder": "הכנס שם מקום",
+    "categoryPlaceholder": "בחר קטגוריה",
+    "descPlaceholder": "הכנס תיאור למקום",
+    "categories": {
+      "all": "הכל",
+      "cafe": "בית קפה",
+      "restaurant": "מסעדה",
+      "park": "פארק",
+      "shopping": "קניות"
+    },
+    "addMarkerButton": "הוסף מיקום",
+    "closeButton": "סגור"
+  }
+}

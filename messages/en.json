@@ -1,0 +1,76 @@
+{
+  "home": {
+    "title": "Navigate the World with Ease",
+    "description": "Discover new places, get directions, and explore the world with our advanced mapping features",
+    "getStarted": "Get Started",
+    "navigation": {
+      "getStarted": "Get Started",
+      "pathName": "google-map"
+    },
+    "exploreTitle": "Explore the World with Us",
+    "exploreDescription": "Discover amazing places and navigate with confidence using our advanced mapping features",
+    "features": [
+      {
+        "title": "Real-time Navigation",
+        "description": "Turn-by-turn directions with live traffic updates"
+      },
+      {
+        "title": "Discover Places",
+        "description": "Find new locations and read reviews from other travelers"
+      },
+      {
+        "title": "Offline Maps",
+        "description": "Download maps for offline use anywhere in the world"
+      }
+    ]
+  },
+  "footer": {
+    "brand": "MapApp",
+    "description": "Helping you navigate and discover the world around you with ease and confidence.",
+    "sections": {
+      "product": "Product",
+      "company": "Company",
+      "resources": "Resources"
+    },
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "api": "API",
+      "integration": "Integration",
+      "about": "About",
+      "blog": "Blog",
+      "careers": "Careers",
+      "press": "Press",
+      "documentation": "Documentation",
+      "support": "Support",
+      "terms": "Terms",
+      "privacy": "Privacy"
+    },
+    "copyright": "© 2025 MapApp. All rights reserved."
+  },
+  "localSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, en {🇬🇧 English} he {🇮🇱 Hebrew} other {Unknown}}"
+  },
+  "map": {
+    "addMarkerTitle": "Add Marker",
+    "category": "Category",
+    "description": "Description",
+    "submit": "Add Marker"
+  },
+  "addMarkerModal": {
+    "header": "Add Marker Details",
+    "titlePlaceholder": "Enter place title",
+    "categoryPlaceholder": "Select category",
+    "descPlaceholder": "Enter place description",
+    "categories": {
+      "all": "All",
+      "cafe": "Cafe",
+      "restaurant": "Restaurant",
+      "park": "Park",
+      "shopping": "Shopping"
+    },
+    "addMarkerButton": "Add Marker",
+    "closeButton": "Close"
+  }
+}
