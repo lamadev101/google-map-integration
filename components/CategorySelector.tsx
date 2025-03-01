@@ -8,7 +8,7 @@ type Props = {
 }
 
 const CategorySelector = ({ value, setValue, hideAllOption = false }: Props) => {
-  const t = useTranslations("addMarkerModal");
+  const t = useTranslations("categories");
   const locale = useLocale();
 
   return (
@@ -21,11 +21,11 @@ const CategorySelector = ({ value, setValue, hideAllOption = false }: Props) => 
         <SelectValue placeholder={t("categoryPlaceholder")} />
       </SelectTrigger>
       <SelectContent className="bg-white">
-        {!hideAllOption && <SelectItem value="All">{t("categories.all")}</SelectItem>}
-        <SelectItem value="Cafe">{t("categories.cafe")}</SelectItem>
-        <SelectItem value="Restaurant">{t("categories.restaurant")}</SelectItem>
-        <SelectItem value="Park">{t("categories.park")}</SelectItem>
-        <SelectItem value="Shopping">{t("categories.shopping")}</SelectItem>
+        {!hideAllOption && <SelectItem value="All">{t("all")}</SelectItem>}
+        <SelectItem value="Cafe">{t("cafe")}</SelectItem>
+        <SelectItem value="Restaurant">{t("restaurant")}</SelectItem>
+        <SelectItem value="Park">{t("park")}</SelectItem>
+        <SelectItem value="Shopping">{t("shopping")}</SelectItem>
       </SelectContent>
     </Select>
   )

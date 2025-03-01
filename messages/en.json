@@ -56,21 +56,24 @@
     "addMarkerTitle": "Add Marker",
     "category": "Category",
     "description": "Description",
-    "submit": "Add Marker"
+    "submit": "Add Marker",
+    "filterCategoryLabel": "Filter Marker by Category",
+    "clearAllMarkers": "Clear all assigned markers!"
   },
   "addMarkerModal": {
     "header": "Add Marker Details",
     "titlePlaceholder": "Enter place title",
-    "categoryPlaceholder": "Select category",
     "descPlaceholder": "Enter place description",
-    "categories": {
-      "all": "All",
-      "cafe": "Cafe",
-      "restaurant": "Restaurant",
-      "park": "Park",
-      "shopping": "Shopping"
-    },
     "addMarkerButton": "Add Marker",
     "closeButton": "Close"
+  },
+  "categories": {
+    "categoryPlaceholder": "Select category",
+    "markerSymbols": "Marker Symbols",
+    "all": "All",
+    "cafe": "Cafe",
+    "restaurant": "Restaurant",
+    "park": "Park",
+    "shopping": "Shopping Mall"
   }
 }

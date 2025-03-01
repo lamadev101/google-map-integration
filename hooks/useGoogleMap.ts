@@ -7,7 +7,6 @@ export default function useGoogleMap() {
 
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
-
   const [category, setCategory] = useState("");
   const [filteredCategory, setFilterCategory] = useState("All");
 
@@ -33,7 +32,7 @@ export default function useGoogleMap() {
     return () => {
       document.head.removeChild(script);
     };
-  }, []);
+  }, [locale]);
 
   // Initialize Map
   useEffect(() => {
@@ -51,13 +50,12 @@ export default function useGoogleMap() {
     }
   }, []);
 
-  // Update displayed markers when category is changed
+  // Update displayed markers when markers, filteredCategory, or locale changes
   useEffect(() => {
     if (map) {
       updateMapMarkers();
     }
-  }, [markers, filteredCategory]);
-
+  }, [markers, filteredCategory, locale]); 
 
   const initMap = () => {
     if (!mapRef.current) return;
@@ -185,6 +183,7 @@ export default function useGoogleMap() {
   return {
     mapRef,
     locale,
+    markers,
     category,
     setCategory,
     mapCenter,
@@ -196,5 +195,5 @@ export default function useGoogleMap() {
     setIsAddMarkerModalOpen,
     handleAddMarker,
     clearAllMarkers,
-  }
+  };
 }

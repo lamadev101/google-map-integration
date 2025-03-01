@@ -52,21 +52,24 @@
     "addMarkerTitle": "הוסף סימון",
     "category": "קטגוריה",
     "description": "תיאור",
-    "submit": "הוסף סימון"
+    "submit": "הוסף סימון",
+    "filterCategoryLabel": "סנן סמנים לפי קטגוריה",
+    "clearAllMarkers": "נקה את כל הסמנים שהוקצו!"
   },
   "addMarkerModal": {
     "header": "הוסף פרטי מיקום",
     "titlePlaceholder": "הכנס שם מקום",
-    "categoryPlaceholder": "בחר קטגוריה",
     "descPlaceholder": "הכנס תיאור למקום",
-    "categories": {
-      "all": "הכל",
-      "cafe": "בית קפה",
-      "restaurant": "מסעדה",
-      "park": "פארק",
-      "shopping": "קניות"
-    },
     "addMarkerButton": "הוסף מיקום",
     "closeButton": "סגור"
+  },
+  "categories": {
+    "categoryPlaceholder": "בחר קטגוריה",
+    "markerSymbols": "סמלי סמנים",
+    "all": "הכל",
+    "cafe": "בית קפה",
+    "restaurant": "מסעדה",
+    "park": "פארק",
+    "shopping": "קניון קניות"
   }
 }
