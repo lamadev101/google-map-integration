@@ -1,9 +1,9 @@
 "use client"
 
-import { usePathname, useRouter } from '@/i18n/navigation'
 import clsx from 'clsx'
 import { useParams } from 'next/navigation'
 import React, { ChangeEvent, useTransition } from 'react'
+import { usePathname, useRouter } from '@/i18n/navigation'
 
 type Props = {
   children: React.ReactNode,
@@ -22,7 +22,7 @@ const LocalSwitchSelect = ({ children, defaultValue, label }: Props) => {
     const nextLocale = event.target.value
     startTransition(() => {
       router.replace(
-        //@ts-ignore
+        //@ts-expect-error: Type mismatch due to router.replace signature
         { pathname, params },
         { locale: nextLocale }
       )
