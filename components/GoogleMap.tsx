@@ -75,14 +75,14 @@ const GoogleMap = () => {
 
         {/* Google Map Container */}
         <div className="w-full">
-          {isLoading ? ( // Show loading spinner if isLoading is true
+          {isLoading ? ( 
             <div className="fixed inset-0 flex items-center justify-center bg-transparent z-50">
               <div className="text-center flex items-center justify-center flex-col">
                 <DotLoader color="#36d7b7" size={50} />
                 <p className="mt-3 font-bold">{t("pleaseWait")}</p>
               </div>
             </div>
-          ) : ( // Show map if isLoading is false
+          ) : ( 
             <div ref={mapRef} style={{ height: "90vh" }} />
           )}
         </div>
