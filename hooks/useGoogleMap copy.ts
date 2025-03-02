@@ -13,8 +13,8 @@ export default function useGoogleMap() {
   const [totalFilteredMarkers, setTotalFilteredMarkers] = useState(0);
 
   const [mapLoaded, setMapLoaded] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const [isAddMarkerModalOpen, setIsAddMarkerModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // Add isLoading state
 
   const [map, setMap] = useState<google.maps.Map | null>(null);
   const [mapCenter, setMapCenter] = useState<{ x: number; y: number } | null>(null);
@@ -32,7 +32,7 @@ export default function useGoogleMap() {
     script.async = true;
     script.onload = () => {
       setMapLoaded(true);
-      setIsLoading(false);
+      setIsLoading(false); // Set isLoading to false when the API is loaded
     };
     document.head.appendChild(script);
     return () => {
@@ -193,9 +193,8 @@ export default function useGoogleMap() {
     locale,
     markers,
     category,
-    mapCenter,
-    isLoading,
     setCategory,
+    mapCenter,
     name, setName,
     desc, setDesc,
     filteredCategory,
@@ -205,5 +204,6 @@ export default function useGoogleMap() {
     setIsAddMarkerModalOpen,
     handleAddMarker,
     clearAllMarkers,
+    isLoading, 
   };
 }

@@ -54,7 +54,9 @@
     "description": "תיאור",
     "submit": "הוסף סימון",
     "filterCategoryLabel": "סנן סמנים לפי קטגוריה",
-    "clearAllMarkers": "נקה את כל הסמנים שהוקצו!"
+    "clearAllMarkers": "נקה את כל הסמנים שהוקצו!",
+    "totalMarkersLabel": "סה\"כ סמנים מסוננים:",
+    "pleaseWait": "אנא המתן. המפה בטעינה..."
   },
   "addMarkerModal": {
     "header": "הוסף פרטי מיקום",

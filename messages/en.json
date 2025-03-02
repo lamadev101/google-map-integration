@@ -58,7 +58,9 @@
     "description": "Description",
     "submit": "Add Marker",
     "filterCategoryLabel": "Filter Marker by Category",
-    "clearAllMarkers": "Clear all assigned markers!"
+    "clearAllMarkers": "Clear all assigned markers!",
+    "totalMarkersLabel": "Total filtered markers:",
+    "pleaseWait": "Please wait. Map is loading..."
   },
   "addMarkerModal": {
     "header": "Add Marker Details",
