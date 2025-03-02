@@ -37,7 +37,7 @@ const LocalSwitchSelect = ({ children, defaultValue, label }: Props) => {
     >
       <p className='sr-only'>{label}</p>
       <select
-        className="inline-flex appearance-none bg-transparent py-3 pl-2 pr-6"
+        className="inline-flex appearance-none bg-transparent py-2 pl-2 pr-6"
         defaultValue={defaultValue}
         disabled={isPending}
         onChange={onSelectChange}

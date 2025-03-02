@@ -1,13 +1,14 @@
 import { CATEGORY_COLORS } from "@/constant";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 
 export default function useGoogleMap() {
   const locale = useLocale();
+  const t = useTranslations("categories");
 
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("Cafe");
   const [filteredCategory, setFilterCategory] = useState("All");
 
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -55,7 +56,7 @@ export default function useGoogleMap() {
     if (map) {
       updateMapMarkers();
     }
-  }, [markers, filteredCategory, locale]); 
+  }, [markers, filteredCategory, locale, map]);
 
   const initMap = () => {
     if (!mapRef.current) return;
@@ -77,6 +78,7 @@ export default function useGoogleMap() {
       }
     });
 
+    // Render markers after map initialization
     updateMapMarkers();
   };
 
@@ -117,7 +119,7 @@ export default function useGoogleMap() {
           labelOrigin: new window.google.maps.Point(0, 32),
         },
         label: {
-          text: `${markerData.name} (${markerData.category})`,
+          text: `${markerData.name} (${t(markerData.category.toLowerCase())})`,
           color: CATEGORY_COLORS[markerData.category],
           fontWeight: "bold",
           fontSize: "14px",
@@ -127,7 +129,7 @@ export default function useGoogleMap() {
       const infoWindow = new window.google.maps.InfoWindow({
         content: `<div style="text-align:center; width: 200px;">
                     <strong>${markerData.name}</strong><br/>
-                    <span style="color:${CATEGORY_COLORS[markerData.category]}">${markerData.category}</span>
+                    <span style="color:${CATEGORY_COLORS[markerData.category]}">${t(markerData.category.toLowerCase())}</span>
                     <p>${markerData.desc}</p>
                   </div>`,
       });
@@ -160,12 +162,12 @@ export default function useGoogleMap() {
     localStorage.setItem("mapMarkers", JSON.stringify(updatedMarkers));
 
     // Update state
-    setMarkers(updatedMarkers);
-    setIsAddMarkerModalOpen(false);
-    setNewMarker(null);
     setName("");
     setDesc("");
+    setNewMarker(null);
     setFilterCategory("All");
+    setMarkers(updatedMarkers);
+    setIsAddMarkerModalOpen(false);
   };
 
   const clearAllMarkers = () => {

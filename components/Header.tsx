@@ -12,7 +12,7 @@ const Header = () => {
     <div
       className={clsx(
         locale === "he" ? "flex-row-reverse" : "",
-        "flex items-center justify-between w-full md:px-20 py-4 fixed top-0 z-50"
+        "flex items-center justify-between w-full px-6 md:px-20 py-4 fixed top-0 z-50"
       )}>
       <div>
         <Link

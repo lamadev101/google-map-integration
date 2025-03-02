@@ -1,26 +1,14 @@
 import React from "react";
-import { Popover, PopoverContent } from "./ui/popover";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Button } from "./ui/button";
-import { useLocale, useTranslations } from "next-intl";
 import { clsx } from "clsx";
+import { useLocale, useTranslations } from "next-intl";
+
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
+import { Textarea } from "./ui/textarea";
 import CategorySelector from "./CategorySelector";
+import { Popover, PopoverContent } from "./ui/popover";
 
-interface Props {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
-  category: string;
-  setCategory: (category: string) => void;
-  title: string;
-  setTitle: (title: string) => void;
-  desc: string;
-  setDesc: (desc: string) => void;
-  onSubmit: () => void;
-  position: { x: number; y: number } | null;
-}
-
-const AddMarkerDetailsModal: React.FC<Props> = ({
+const AddMarkerDetailsModal: React.FC<IAddMarkerDetailsModal> = ({
   isOpen,
   setIsOpen,
   category,
@@ -56,7 +44,7 @@ const AddMarkerDetailsModal: React.FC<Props> = ({
           className="mb-3 focus:ring-0 focus:outline-none focus:border-0"
         />
 
-       <CategorySelector value={category} setValue={setCategory} hideAllOption />
+        <CategorySelector value={category} setValue={setCategory} hideAllOption />
 
         <Textarea
           placeholder={t("descPlaceholder")}

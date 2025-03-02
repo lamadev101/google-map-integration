@@ -1,17 +1,16 @@
+import { clsx } from "clsx";
+import Image from "next/image";
+
+import { Link } from "@/i18n/navigation";
 import Footer from "@/components/Footer";
+import { setRequestLocale } from "next-intl/server";
+import { useLocale, useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 import { Navigation2, Compass, Map } from "lucide-react";
-import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
-import { clsx } from "clsx";
-import { Link } from "@/i18n/navigation";
-import { setRequestLocale } from "next-intl/server";
 
 export default function Home() {
   const t = useTranslations("home");
   const locale = useLocale();
-
-  // Enable static rendering
   setRequestLocale(locale);
 
 
@@ -35,26 +34,40 @@ export default function Home() {
 
   return (
     <>
-      <section className={clsx(locale === "he" ? "flex-row-reverse" : "", "flex items-center justify-center py-16  ")}>
-        <div className="py-16 px-4 md:px-8">
+      <section
+        className={clsx(
+          locale === "he" ? "flex-row-reverse" : "",
+          "md:flex items-center justify-center py-10 md:py-16 px-4 md:px-8 max-w-6xl mx-auto"
+        )}
+      >
+        <div className="w-full md:w-1/2 text-center md:text-left mt-20 md:mt-10">
           <div className={clsx(locale === "he" ? "text-right" : "text-left")}>
-            <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
-            <p className="text-muted-foreground max-w-2xl mb-20">{t("description")}</p>
+            <h1 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">
+              {t("title")}
+            </h1>
+            <p className="text-muted-foreground md:mx-0 mb-8 md:mb-12">
+              {t("description")}
+            </p>
             <Link
               href={"/google-map"}
-              className="border border-gray-400 px-4 py-2 rounded-md mt-4"
+              className="bg-gray-900 px-6 py-3 md:py-4 rounded-md text-white inline-block"
             >
               {t("getStarted")}
             </Link>
           </div>
         </div>
-        <Image
-          width={400}
-          height={400}
-          alt="Map View"
-          src={"/google-map.png"}
-          unoptimized
-        />
+
+        {/* Right Column (Image) */}
+        <div className="w-full md:w-1/2 flex justify-center">
+          <Image
+            width={600}
+            height={500}
+            alt="Map View"
+            src={"/google-map.png"}
+            className="max-w-full h-auto"
+            unoptimized
+          />
+        </div>
       </section>
 
       <section className="py-16 px-4 md:px-8 bg-background">

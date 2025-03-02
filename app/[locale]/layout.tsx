@@ -7,6 +7,7 @@ import { getMessages } from "next-intl/server";
 import Header from "@/components/Header";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import NextTopLoader from 'nextjs-toploader';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default async function RootLayout({ children, params }: {
         <NextIntlClientProvider locale={locale} messages={message}>
           <Header />
           {children}
+          <NextTopLoader color="#e75480" height={4} crawlSpeed={200} zIndex={2000} showSpinner={false} shadow="0 0 10px #e75480,0 0 5px #f0e1e7" />
         </NextIntlClientProvider>
       </body>
     </html>
